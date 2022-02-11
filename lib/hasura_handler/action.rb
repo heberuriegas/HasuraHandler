@@ -20,7 +20,8 @@ module HasuraHandler
                 :headers,
                 :input,
                 :output,
-                :error_message
+                :error_message,
+                :error_object
 
     def initialize(headers, session_variables, input)
       @headers = headers

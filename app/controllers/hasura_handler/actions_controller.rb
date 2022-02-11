@@ -19,7 +19,7 @@ module HasuraHandler
 
       action.run
       if action.error_message.present?
-        render json: { error: true, message: action.error_message }, status: 400
+        render json: { error: true, message: action.error_message, extensions: action.error_object }, status: 400
       else
         render json: action.output
       end
